@@ -156,6 +156,17 @@ Pull corresponding/suitable linux build from git to /home/<user>.
 
 Run CapsLockCtrlEscape.ahk to swap caps for escape.
 
+From https://superuser.com/questions/954950/run-a-script-on-start-up-on-windows-10
+
+```txt
+The startup folder is still there and functions as normal.
+
+To access it, press Windows+R, then type shell:startup.
+```
+
+To run CapsLockCtrlEscape.ahk at login, make a shortcut of the script and move it to directory C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup,
+which can be reached by running ```sh shell:startup``` at run prompt (Win+R).
+
 ## SSH
 
 One way to generate ssh keypairs is to use gpg in wsl.
