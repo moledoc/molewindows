@@ -1,11 +1,13 @@
 # molewindows
 
-## Setup
+## After installation
 
-After installation, go through each Settings subcategory.
+First thing: **CREATE TWO ACCOUNTS: ONE ADMIN, ONE USER**
+
+Go through each Settings subcategory.
 Change privacy settings and personalize looks.
 
-** LOOK AT TODO: WANT TO IMPROVE **
+**LOOK AT TODO: WANT TO IMPROVE**
 
 ## Programs
 
@@ -50,6 +52,7 @@ wsl --set-default-version 2
 From MS store select wanted distro (in this case ubuntu) and
 
 * get
+
 * install
 
 Run WSL2 and create a user.
