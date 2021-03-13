@@ -1,5 +1,9 @@
 # molewindows
 
+## Keybindings
+
+* alt as modkey in windows terminal
+
 ## After installation
 
 First thing: **CREATE TWO ACCOUNTS: ONE ADMIN, ONE USER**
