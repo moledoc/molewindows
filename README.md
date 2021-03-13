@@ -189,7 +189,7 @@ Update 2019 - A better solution if you're using Windows 10: OpenSSH is available
     * Open Services from the start Menu
     * Scroll down to OpenSSH Authentication Agent > right click > properties
     * Change the Startup type from Disabled to any of the other 3 options. I have mine set to Automatic (Delayed Start)
-    * Open cmd and type where ssh to confirm that the top listed path is in System32. Mine is installed at C:\Windows\System32\OpenSSH\ssh.exe. If it's not in the list you may need to close and reopen cmd.
+    * Open cmd and type ```sh where ssh``` to confirm that the top listed path is in System32. Mine is installed at C:\Windows\System32\OpenSSH\ssh.exe. If it's not in the list you may need to close and reopen cmd.
 
 Once you've followed these steps, ssh-agent, ssh-add and all other ssh commands should now work from cmd. To start the agent you can simply type ssh-agent.
 
@@ -201,6 +201,31 @@ Some nice things about this solution:
    * Identities that you've added (using ssh-add) will get automatically added after restarts. (It works for me, but you might possibly need a config file in your c:\Users\User\.ssh folder)
    * You don't need git!
    * You can register any rsa private key to the agent. The other solution will only pick up a key named id_rsa
+```
+
+If one is in a user that has no admin privileges, then open powershell in admin privileges and run
+
+```sh
+Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
+```
+
+Generating ssh keys in powershell
+
+```sh
+ ssh-keygen -t rsa -b 4096 -C "<email>" -f $HOME/.ssh/<key_name>
+```
+
+In powershell ssh-agent, ssh-add should also work similarly to linux.
+
+
+## Git
+
+If file path is too long when cloning, run 
+
+```sh
+git config --system core.longpaths true
+# or for specific repo
+git clone -c core.longpaths=true <repo-url>
 ```
 
 
