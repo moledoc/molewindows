@@ -29,6 +29,8 @@ Change privacy settings and personalize looks.
     * Rstudio
     * VScode
     * notepad++
+    * git
+    * miktex
 
 * Comms
     * Signal
@@ -42,6 +44,7 @@ Change privacy settings and personalize looks.
     * Bazecor
     * Malwarebytes
     * Transmission
+    * Toggl track
 
 ## WSL2 install
  
