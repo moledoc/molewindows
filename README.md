@@ -235,6 +235,19 @@ git config --system core.longpaths true
 git clone -c core.longpaths=true <repo-url>
 ```
 
+## MinGW
+
+Install MinGW from https://osdn.net/projects/mingw/downloads/68260/mingw-get-setup.exe/.
+Do the installation (default settings are ok).
+Open MinGW Manager and under Basic Setup choose atleast mingw-developer-toolkit-bin, mingw32-gcc-g++-bin, mingw32-base-bin, msys-base-bin.
+With right click mark them "Mark for installation".
+If thats done, then choose "Apply Changes" from the "Installation" menu.
+Run MinGW (C:/MinGW/msys/1.0/msys.bat) and test
+
+```sh
+g++ -v
+make -v
+```
 
 ## TODO
 
